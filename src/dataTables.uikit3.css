@@ -1,0 +1,325 @@
+table.dataTable {
+  clear: both;
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
+  max-width: none !important;
+  /*border-collapse: separate !important; breaks */
+}
+
+table.dataTable td,
+table.dataTable th {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+table.dataTable td.dataTables_empty,
+table.dataTable th.dataTables_empty {
+  text-align: center;
+}
+
+table.dataTable.nowrap th,
+table.dataTable.nowrap td {
+  white-space: nowrap;
+}
+
+/*div.dataTables_wrapper div.row.uk-grid.dt-merge-grid {*/
+/*margin-top: 5px;*/
+/*}*/
+
+div.dataTables_wrapper div.dataTables_length label {
+  font-weight: normal;
+  text-align: left;
+  white-space: nowrap;
+}
+
+div.dataTables_wrapper div.dataTables_length select {
+  width: 75px;
+  display: inline-block;
+}
+
+div.dataTables_wrapper div.dataTables_filter {
+  text-align: right;
+}
+
+div.dataTables_wrapper div.dataTables_filter label {
+  font-weight: normal;
+  white-space: nowrap;
+  text-align: left;
+}
+
+div.dataTables_wrapper div.dataTables_filter input {
+  margin-left: 0.5em;
+  display: inline-block;
+  width: auto;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+  padding-top: 8px;
+  white-space: nowrap;
+}
+
+div.dataTables_wrapper div.dataTables_paginate {
+  margin: 0;
+  white-space: nowrap;
+  text-align: right;
+}
+
+div.dataTables_wrapper div.dataTables_paginate ul.uk-pagination {
+  margin: 2px 0;
+  white-space: nowrap;
+  /*justify-content: flex-end; set in uikit.js*/
+}
+
+div.dataTables_wrapper div.dataTables_processing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  margin-left: -100px;
+  margin-top: -26px;
+  text-align: center;
+  padding: 1em 0;
+}
+
+/*table.dataTable thead > tr > th,*/
+/*table.dataTable thead > tr > td {*/
+/*position: relative;*/
+/*}*/
+
+table.dataTable thead > tr > .sorting_asc,
+table.dataTable thead > tr > .sorting_desc,
+table.dataTable thead > tr > .sorting {
+  cursor: pointer;
+}
+
+/*table.dataTable thead > tr > .sorting_asc:not(.uk-text-right),*/
+/*table.dataTable thead > tr > .sorting_desc:not(.uk-text-right),*/
+/*table.dataTable thead > tr > .sorting:not(.uk-text-right) {*/
+/*!*padding-right: 20px !important;*!*/
+/*}*/
+
+/*!** move arrow left *!*/
+/*table.dataTable thead > tr > .sorting_asc.uk-text-right,*/
+/*table.dataTable thead > tr > .sorting_desc.uk-text-right,*/
+/*table.dataTable thead > tr > .sorting.uk-text-right {*/
+/*!*padding-left: 20px !important;*!*/
+/*!*padding-right: 4px !important;*!*/
+/*}*/
+
+table.dataTable thead > tr > .sorting:not(.uk-text-right):after,
+table.dataTable thead > tr > .sorting_asc:not(.uk-text-right):after,
+table.dataTable thead > tr > .sorting_desc:not(.uk-text-right):after {
+  padding-left: 4px;
+}
+
+table.dataTable thead > tr > .sorting.uk-text-right:before,
+table.dataTable thead > tr > .sorting_asc.uk-text-right:before,
+table.dataTable thead > tr > .sorting_desc.uk-text-right:before {
+  padding-right: 4px;
+}
+
+/* Mini version of Ionicons */
+@font-face {
+  font-family: "Ionicons";
+  src: url("./ionicons.woff2?v=3.0.0-alpha.3") format("woff2");
+}
+
+table.dataTable thead > tr > .sorting:not(.uk-text-right):after,
+table.dataTable thead > tr > .sorting_asc:not(.uk-text-right):after,
+table.dataTable thead > tr > .sorting_desc:not(.uk-text-right):after,
+table.dataTable thead > tr > .sorting.uk-text-right:before,
+table.dataTable thead > tr > .sorting_asc.uk-text-right:before,
+table.dataTable thead > tr > .sorting_desc.uk-text-right:before {
+  position: relative;
+  /*right: 8px;*/
+  /*display: block;*/
+  /*font-family: 'FontAwesome';*/
+  display: inline-block;
+  font-family: "ionicons";
+  /*font-weight: 700;*/
+  /*font-size: .9rem;*/
+  width: 12px; /* To keep three sort states have same width */
+}
+
+table.dataTable thead > tr > .sorting:not(.uk-text-right):after,
+table.dataTable thead > tr > .sorting.uk-text-right:before {
+  /*content: "\f0dc";*/
+  /*top: 2px;*/
+  /*content: "\f21f";*/
+  top: 0;
+  content: "\f286";
+  color: rgba(167, 167, 167, .3);
+}
+
+/*table.dataTable thead > tr > .sorting:not(.uk-text-right):after {*/
+/*transform: rotate(-90.0deg); !** no suitable icon, so rotate to create one *!*/
+/*}*/
+
+/*table.dataTable thead > tr > .sorting.uk-text-right:before {*/
+/*transform: rotate(90.0deg); !** no suitable icon, so rotate to create one *!*/
+/*}*/
+
+table.dataTable thead > tr > .sorting_asc:not(.uk-text-right):after,
+table.dataTable thead > tr > .sorting_asc.uk-text-right:before {
+  top: 0;
+  /*content: "\f0de";*/
+  /*content: "\f28b";*/
+  /*content: "\f11a";*/
+  content: "\f286"
+}
+
+table.dataTable thead > tr > .sorting_desc:not(.uk-text-right):after,
+table.dataTable thead > tr > .sorting_desc.uk-text-right:before {
+  top: 0;
+  /*content: "\f0dd";*/
+  /*content: "\f289";*/
+  /*content: "\f118";*/
+  content: "\f280"
+}
+
+table.dataTable.uk-table-small thead > tr > .sorting:not(.uk-text-right):after,
+table.dataTable.uk-table-small thead > tr > .sorting_asc:not(.uk-text-right):after,
+table.dataTable.uk-table-small thead > tr > .sorting_desc:not(.uk-text-right):after,
+table.dataTable.uk-table-small thead > tr > .sorting.uk-text-right:before,
+table.dataTable.uk-table-small thead > tr > .sorting_asc.uk-text-right:before,
+table.dataTable.uk-table-small thead > tr > .sorting_desc.uk-text-right:before {
+  padding-top: .75em; /*0.12em;*/
+}
+
+div.dataTables_scrollHead table.dataTable {
+  margin-bottom: 0 !important;
+}
+
+div.dataTables_scrollBody table {
+  border-top: none;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+div.dataTables_scrollBody table thead .sorting:not(.uk-text-right):after,
+div.dataTables_scrollBody table thead .sorting_asc:not(.uk-text-right):after,
+div.dataTables_scrollBody table thead .sorting_desc:not(.uk-text-right):after,
+div.dataTables_scrollBody table thead .sorting.uk-text-right:before,
+div.dataTables_scrollBody table thead .sorting_asc.uk-text-right:before,
+div.dataTables_scrollBody table thead .sorting_desc.uk-text-right:before {
+  display: none !important;
+}
+
+div.dataTables_scrollBody table tbody tr:first-child th,
+div.dataTables_scrollBody table tbody tr:first-child td {
+  border-top: none;
+}
+
+div.dataTables_scrollFoot table {
+  margin-top: 0 !important;
+  border-top: none;
+}
+
+@media screen and (max-width: 767px) {
+  div.dataTables_wrapper div.dataTables_length,
+  div.dataTables_wrapper div.dataTables_filter,
+  div.dataTables_wrapper div.dataTables_info,
+  div.dataTables_wrapper div.dataTables_paginate {
+    text-align: center;
+  }
+}
+
+table.dataTable.uk-table-small thead > tr > .sorting:not(.uk-text-right):after,
+table.dataTable.uk-table-small thead > tr > .sorting_asc:not(.uk-text-right):after,
+table.dataTable.uk-table-small thead > tr > .sorting_desc:not(.uk-text-right):after,
+table.dataTable.uk-table-small thead > tr > .sorting.uk-text-right:before,
+table.dataTable.uk-table-small thead > tr > .sorting_asc.uk-text-right:before,
+table.dataTable.uk-table-small thead > tr > .sorting_desc.uk-text-right:before {
+  padding-top: 2px;
+}
+
+/* General Datatables padding fix */
+table.dataTable.uk-table th,
+table.dataTable.uk-table td {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+table.dataTable.uk-table-small th,
+table.dataTable.uk-table-small td {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+div.dataTables_scrollBody > table.uk-table.uk-table-divider thead tr,
+div.dataTables_scrollBody > table.uk-table.uk-table-divider tfoot tr {
+  border-style: hidden !important;
+}
+
+/** Customizable */
+table.dataTable th.sorting_asc,
+table.dataTable th.sorting_desc {
+  /*border-bottom: 1px solid rgb(252, 104, 0) !important;*/
+  color: white;
+}
+
+table.dataTable .sorting:hover,
+table.dataTable .sorting:not(.uk-text-right):hover:after,
+table.dataTable .sorting.uk-text-right:hover:before,
+div.dataTables_paginate li.paginate_button.uk-active > * {
+  background-color: #1e87f0;
+  color: white;
+  /* nvidia green
+  background-color: green;
+  color: rgb(250, 233, 66);
+  */
+}
+
+table.dataTable.uk-table td,
+table.dataTable.uk-table th {
+  font-size: 1rem;
+}
+
+table.dataTable.uk-table-small td,
+table.dataTable.uk-table-small th,
+div.dataTables_paginate li.paginate_button > * {
+  font-size: .95rem;
+}
+
+/*table.dataTable td,*/
+/*table.dataTable th {*/
+/*border: 1px solid rgba(130, 130, 130, .2);*/
+/*}*/
+
+/*table.dataTable .sorting:hover,*/
+/*table.dataTable .sorting_asc:hover,*/
+/*table.dataTable .sorting_desc:hover {*/
+/*background-color: rgba(255, 255, 255, .2);*/
+/*}*/
+
+.unselectable {
+  user-select: none;
+  cursor: default;
+}
+
+div.dataTables_paginate {
+  padding-top: .75rem;
+  font-size: .95rem;
+}
+
+div.dataTables_paginate li.paginate_button {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+div.dataTables_paginate li.paginate_button > * {
+  border-radius: 2px;
+  min-width: 22px;
+  padding: 2px 5px;
+  text-align: center;
+}
+
+/** Related fix to uikit.js, because the icon "<" and ">" a bit higher than other buttons */
+div.dataTables_paginate li.paginate_button span.uk-pagination-previous,
+div.dataTables_paginate li.paginate_button span.uk-pagination-next {
+  padding-top: 3px !important;
+}
+
+div.dataTables_paginate li.paginate_button.disabled > * {
+  opacity: .3;
+}
