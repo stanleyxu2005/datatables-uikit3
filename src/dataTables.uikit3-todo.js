@@ -43,7 +43,12 @@
     "<'row uk-grid'<'uk-width-1-2'l><'uk-width-1-2'f>>" +
     "<'row uk-grid dt-merge-grid'<'uk-width-1-1'tr>>" +
     "<'row uk-grid dt-merge-grid'<'uk-width-2-5'i><'uk-width-3-5'p>>",
-    renderer: 'uikit'
+    renderer: 'uikit',
+    // todo: these are unrelated look and feel tweaks
+    language: {
+      zeroRecords: '<div class="unselectable"><div class="uk-margin-large-top" style="margin-bottom:-28px"><clr-icon shape="search" size="144"></clr-icon></div><h5>We didn\'t find anything</h5></div>',
+      sEmptyTable: '<div class="unselectable"><div class="uk-margin-large-top" style="margin-bottom:-44px"><clr-icon shape="folder-open" size="144"></clr-icon></div><h5>The table is empty</h5></div>'
+    }
   });
 
   /* Default class modification */
