@@ -1,3 +1,7 @@
+/*
+ * Licensed under the Apache License, Version 2.0
+ * See accompanying LICENSE file.
+ */
 table.dataTable {
   clear: both;
   margin-top: 6px !important;
@@ -147,7 +151,8 @@ table.dataTable thead > tr > .sorting.uk-text-right:before {
   /*top: 2px;*/
   /*content: "\f21f";*/
   top: 0;
-  content: "\f286";
+  /*content: "\f286";*/
+  content: "\f3d8";
   color: rgba(167, 167, 167, .3);
 }
 
@@ -162,19 +167,15 @@ table.dataTable thead > tr > .sorting.uk-text-right:before {
 table.dataTable thead > tr > .sorting_asc:not(.uk-text-right):after,
 table.dataTable thead > tr > .sorting_asc.uk-text-right:before {
   top: 0;
-  /*content: "\f0de";*/
-  /*content: "\f28b";*/
-  /*content: "\f11a";*/
-  content: "\f286"
+  /*content: "\f286"*/
+  content: "\f3d8"
 }
 
 table.dataTable thead > tr > .sorting_desc:not(.uk-text-right):after,
 table.dataTable thead > tr > .sorting_desc.uk-text-right:before {
   top: 0;
-  /*content: "\f0dd";*/
-  /*content: "\f289";*/
-  /*content: "\f118";*/
-  content: "\f280"
+  /*content: "\f280"*/
+  content: "\f3d0"
 }
 
 table.dataTable.uk-table-small thead > tr > .sorting:not(.uk-text-right):after,
@@ -234,17 +235,17 @@ table.dataTable.uk-table-small thead > tr > .sorting_desc.uk-text-right:before {
 }
 
 /* General Datatables padding fix */
-table.dataTable.uk-table th,
-table.dataTable.uk-table td {
-  padding-left: 14px;
-  padding-right: 14px;
-}
+/*table.dataTable.uk-table th,*/
+/*table.dataTable.uk-table td {*/
+  /*padding-left: 14px;*/
+  /*padding-right: 14px;*/
+/*}*/
 
-table.dataTable.uk-table-small th,
-table.dataTable.uk-table-small td {
-  padding-left: 6px;
-  padding-right: 6px;
-}
+/*table.dataTable.uk-table-small th,*/
+/*table.dataTable.uk-table-small td {*/
+  /*padding-left: 6px;*/
+  /*padding-right: 6px;*/
+/*}*/
 
 div.dataTables_scrollBody > table.uk-table.uk-table-divider thead tr,
 div.dataTables_scrollBody > table.uk-table.uk-table-divider tfoot tr {
@@ -252,33 +253,61 @@ div.dataTables_scrollBody > table.uk-table.uk-table-divider tfoot tr {
 }
 
 /** Customizable */
-table.dataTable th.sorting_asc,
-table.dataTable th.sorting_desc {
-  /*border-bottom: 1px solid rgb(252, 104, 0) !important;*/
-  color: white;
-}
 
-table.dataTable .sorting:hover,
-table.dataTable .sorting:not(.uk-text-right):hover:after,
-table.dataTable .sorting.uk-text-right:hover:before,
-div.dataTables_paginate li.paginate_button.uk-active > * {
-  background-color: #1e87f0;
-  color: white;
+/** Sorted column (2 rules) */
+.uk-light table.dataTable th.sorting_asc,
+.uk-light table.dataTable th.sorting_desc,
+.uk-light table.dataTable .sorting:hover,
+.uk-light table.dataTable .sorting:not(.uk-text-right):hover:after,
+.uk-light table.dataTable .sorting.uk-text-right:hover:before,
+.uk-light div.dataTables_paginate li.paginate_button.uk-active > * {
+  /*border-bottom: 1px solid rgb(252, 104, 0) !important;*/
+  background-color: #1e87f0 !important;
+  color: white !important;
   /* nvidia green
   background-color: green;
   color: rgb(250, 233, 66);
   */
 }
 
-table.dataTable.uk-table td,
+table.dataTable th.sorting_asc,
+table.dataTable th.sorting_desc,
+table.dataTable .sorting:hover,
+table.dataTable .sorting:not(.uk-text-right):hover:after,
+table.dataTable .sorting.uk-text-right:hover:before,
+div.dataTables_paginate li.paginate_button.uk-active > * {
+  /*border-bottom: 1px solid rgb(252, 104, 0) !important;*/
+  color: #1e87f0 !important;
+}
+
+/** Font size (5 rules) */
+.uk-light table.dataTable.uk-table th {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
 table.dataTable.uk-table th {
+  vertical-align: top;
+  font-weight: 500;
+  text-transform: unset;
+  color: black;
+}
+
+table.dataTable.uk-table th {
+  font-size: 13px; /*.9rem*/
+}
+
+table.dataTable.uk-table td {
   font-size: 1rem;
 }
 
+table.dataTable.uk-table-small th {
+  font-size: 12px; /*.85rem*/
+}
+
 table.dataTable.uk-table-small td,
-table.dataTable.uk-table-small th,
 div.dataTables_paginate li.paginate_button > * {
-  font-size: .95rem;
+  font-size: 13px; /*.95rem*/
 }
 
 /*table.dataTable td,*/

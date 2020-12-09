@@ -1,8 +1,9 @@
-/*! DataTables UIkit 3 integration
+/*
+ * Licensed under the Apache License, Version 2.0
+ * See accompanying LICENSE file.
  */
-
 /**
- * This is a tech preview of UIKit integration with DataTables.
+ * This is a UIKit 3.0 integration with DataTables.
  */
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
@@ -43,7 +44,14 @@
     "<'row uk-grid'<'uk-width-1-2'l><'uk-width-1-2'f>>" +
     "<'row uk-grid dt-merge-grid'<'uk-width-1-1'tr>>" +
     "<'row uk-grid dt-merge-grid'<'uk-width-2-5'i><'uk-width-3-5'p>>",
-    renderer: 'uikit'
+    renderer: 'uikit',
+    // todo: these are unrelated look and feel tweaks
+    language: {
+      sZeroRecords:
+        '<div class="unselectable uk-padding"><span uk-icon="icon:search; ratio:8"></span><h4 class="uk-margin-small-top">We didn\'t find anything</h4><h6 class="text-muted">Try a different keyword</h6></div>',
+      sEmptyTable:
+        '<div class="unselectable uk-padding"><span uk-icon="icon:lock; ratio:8"></span><h4 class="uk-margin-small-top">No data available</h4><h6 class="text-muted">Looks empty over here</h6></div>',
+    },
   });
 
   /* Default class modification */
@@ -84,7 +92,7 @@
 
           switch (button) {
             case 'ellipsis':
-              btnDisplay = '<span>...</span>';
+              btnDisplay = '<span uk-icon="icon:more; ratio:0.8"></span>';
               btnClass = 'uk-disabled disabled';
               break;
 
@@ -95,13 +103,13 @@
               break;
 
             case 'previous':
-              btnDisplay = '<span uk-pagination-previous></span> ' + lang.sPrevious;
+              btnDisplay = '<span uk-icon="arrow-left"></span>' + lang.sPrevious;
               btnClass = (page > 0 ?
                 '' : 'uk-disabled disabled');
               break;
 
             case 'next':
-              btnDisplay = lang.sNext + '<span uk-pagination-next></span>';
+              btnDisplay = lang.sNext + '<span uk-icon="arrow-right"></span>';
               btnClass = (page < pages - 1 ?
                 '' : 'uk-disabled disabled');
               break;
