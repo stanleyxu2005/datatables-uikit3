@@ -48,9 +48,9 @@
     // todo: these are unrelated look and feel tweaks
     language: {
       sZeroRecords:
-        '<div class="unselectable uk-padding"><span uk-icon="icon:search; ratio:8"></span><h4 class="uk-margin-small-top">We didn\'t find anything</h4><h6 class="text-muted">Try a different keyword</h6></div>',
+        '<div class="unselectable uk-padding"><span uk-icon="icon:search; ratio:8"></span><h4 class="uk-margin-small-top">We didn\'t find anything</h4><h6 class="uk-text-muted">Try a different keyword</h6></div>',
       sEmptyTable:
-        '<div class="unselectable uk-padding"><span uk-icon="icon:lock; ratio:8"></span><h4 class="uk-margin-small-top">No data available</h4><h6 class="text-muted">Looks empty over here</h6></div>',
+        '<div class="unselectable uk-padding"><span uk-icon="icon:lock; ratio:8"></span><h4 class="uk-margin-small-top">No data available</h4><h6 class="uk-text-muted">Looks empty over here</h6></div>',
     },
   });
 
